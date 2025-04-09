@@ -1,4 +1,4 @@
-#include "flutter_demo_plugin.h"
+#include "flutter_amap_window_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -16,14 +16,14 @@
 namespace flutter_amap_window {
 
 // static
-void FlutterDemoPlugin::RegisterWithRegistrar(
+void FlutterAmapWindowPlugin::RegisterWithRegistrar(
     flutter::PluginRegistrarWindows *registrar) {
   auto channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
           registrar->messenger(), "flutter_amap_window",
           &flutter::StandardMethodCodec::GetInstance());
 
-  auto plugin = std::make_unique<FlutterDemoPlugin>();
+  auto plugin = std::make_unique<FlutterAmapWindowPlugin>();
 
   channel->SetMethodCallHandler(
       [plugin_pointer = plugin.get()](const auto &call, auto result) {
@@ -33,11 +33,11 @@ void FlutterDemoPlugin::RegisterWithRegistrar(
   registrar->AddPlugin(std::move(plugin));
 }
 
-FlutterDemoPlugin::FlutterDemoPlugin() {}
+FlutterAmapWindowPlugin::FlutterAmapWindowPlugin() {}
 
-FlutterDemoPlugin::~FlutterDemoPlugin() {}
+FlutterAmapWindowPlugin::~FlutterAmapWindowPlugin() {}
 
-void FlutterDemoPlugin::HandleMethodCall(
+void FlutterAmapWindowPlugin::HandleMethodCall(
     const flutter::MethodCall<flutter::EncodableValue> &method_call,
     std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>> result) {
   if (method_call.method_name().compare("getPlatformVersion") == 0) {

@@ -14,7 +14,7 @@ cmake_policy(VERSION 3.14...3.25)
 
 # This value is used when generating builds using this plugin, so it must
 # not be changed
-set(PLUGIN_NAME "flutter_demo_plugin")
+set(PLUGIN_NAME "flutter_amap_window_plugin")
 
 # Any new source files that you add to the plugin should be added here.
 list(APPEND PLUGIN_SOURCES
@@ -51,7 +51,7 @@ target_link_libraries(${PLUGIN_NAME} PRIVATE flutter flutter_wrapper_plugin)
 # List of absolute paths to libraries that should be bundled with the plugin.
 # This list could contain prebuilt libraries, or libraries created by an
 # external build triggered from this build file.
-set(flutter_demo_bundled_libraries
+set(flutter_amap_window_bundled_libraries
   ""
   PARENT_SCOPE
 )
@@ -81,7 +81,7 @@ FetchContent_MakeAvailable(googletest)
 # The plugin's C API is not very useful for unit testing, so build the sources
 # directly into the test binary rather than using the DLL.
 add_executable(${TEST_RUNNER}
-  test/flutter_demo_plugin_test.cpp
+  test/flutter_amap_window_plugin_test.cpp
   ${PLUGIN_SOURCES}
 )
 apply_standard_settings(${TEST_RUNNER})

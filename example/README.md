@@ -1,6 +1,6 @@
-# flutter_demo_example
+# flutter_amap_window_example
 
-Demonstrates how to use the flutter_demo plugin.
+Demonstrates how to use the flutter_amap_window plugin.
 
 ## Getting Started
 

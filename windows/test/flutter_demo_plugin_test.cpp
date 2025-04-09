@@ -22,8 +22,8 @@ using flutter::MethodResultFunctions;
 
 }  // namespace
 
-TEST(FlutterDemoPlugin, GetPlatformVersion) {
-  FlutterDemoPlugin plugin;
+TEST(FlutterAmapWindowPlugin, GetPlatformVersion) {
+  FlutterAmapWindowPlugin plugin;
   // Save the reply value from the success callback.
   std::string result_string;
   plugin.HandleMethodCall(
@@ -40,4 +40,4 @@ TEST(FlutterDemoPlugin, GetPlatformVersion) {
 }
 
 }  // namespace test
-}  // namespace flutter_demo
+}  // namespace flutter_amap_window

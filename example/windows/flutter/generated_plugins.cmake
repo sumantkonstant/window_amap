@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  flutter_demo
+  flutter_amap_window
   flutter_inappwebview_windows
   webview_windows
 )

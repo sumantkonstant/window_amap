@@ -1,4 +1,4 @@
-#include "include/flutter_demo/flutter_amap_window_plugin_c_api.h"
+#include "include/flutter_amap_window/flutter_amap_window_plugin_c_api.h"
 
 #include <flutter/plugin_registrar_windows.h>
 
