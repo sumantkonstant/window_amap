@@ -1,5 +1,5 @@
-#ifndef FLUTTER_PLUGIN_FLUTTER_DEMO_PLUGIN_H_
-#define FLUTTER_PLUGIN_FLUTTER_DEMO_PLUGIN_H_
+#ifndef FLUTTER_PLUGIN_FLUTTER_AMAP_WINDOW_PLUGIN_H_
+#define FLUTTER_PLUGIN_FLUTTER_AMAP_WINDOW_PLUGIN_H_
 
 #include <flutter/method_channel.h>
 #include <flutter/plugin_registrar_windows.h>
@@ -8,17 +8,17 @@
 
 namespace flutter_amap_window {
 
-class FlutterDemoPlugin : public flutter::Plugin {
+class FlutterAmapWindowPlugin : public flutter::Plugin {
  public:
   static void RegisterWithRegistrar(flutter::PluginRegistrarWindows *registrar);
 
-  FlutterDemoPlugin();
+  FlutterAmapWindowPlugin();
 
-  virtual ~FlutterDemoPlugin();
+  virtual ~FlutterAmapWindowPlugin();
 
   // Disallow copy and assign.
-  FlutterDemoPlugin(const FlutterDemoPlugin&) = delete;
-  FlutterDemoPlugin& operator=(const FlutterDemoPlugin&) = delete;
+  FlutterAmapWindowPlugin(const FlutterAmapWindowPlugin&) = delete;
+  FlutterAmapWindowPlugin& operator=(const FlutterAmapWindowPlugin&) = delete;
 
   // Called when a method is called on this plugin's channel from Dart.
   void HandleMethodCall(
@@ -28,4 +28,4 @@ class FlutterDemoPlugin : public flutter::Plugin {
 
 }  // namespace flutter_amap_window
 
-#endif  // FLUTTER_PLUGIN_FLUTTER_DEMO_PLUGIN_H_
+#endif  // FLUTTER_PLUGIN_FLUTTER_AMAP_WINDOW_PLUGIN_H_
